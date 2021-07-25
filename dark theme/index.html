@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Note Making</title>
+</head>
+
+<body onload="displayNotes()">
+    <h1>Welcome to Quick Notes!</h1>
+    <section class="box">
+        <h3>Add a note</h3>
+        <textarea name="content" id="content" rows="4" placeholder="Enter content here"></textarea>
+        <div class="btn-box">
+            <button class="success" onclick="addNote()">Add Note</button>
+        </div>
+    </section>
+
+    <h1>Your Notes</h1>
+    <hr>
+    <p class="text" id="text">There are no notes here currently. All tasks completed.</p>
+
+    <section class="collection" id="notes"></section>
+
+    <section class="pop-up" id="pop-up">
+        <section class="box">
+            <h3>Edit Note</h3>
+            <textarea name="content" id="original" style="display: none;" rows="5"></textarea>
+            <textarea name="content" id="edit-text" rows="5" placeholder="Enter some content"></textarea>
+            <div class="btn-box">
+                <button class="success" onclick="updateNote()">Update Note</button>
+            </div>
+        </section>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
